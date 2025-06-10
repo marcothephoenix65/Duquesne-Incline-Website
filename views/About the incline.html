@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Duquesne Incline website</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>The Duquesne Incline</h1>
+    </header>
+
+    <header>
+        <img src="../static/Incline logo.jpg" alt="incline logo" class="logo">
+    </header>
+
+    <div class="main">
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="Group Information.html">Group Information</a>
+            <a href="Gift Shop.html">Gift Shop</a>
+            <a href="Things To Do.html">Things To Do</a>
+            <a href="About the Incline.html" class="active">About the Incline</a>
+        </nav>
+        
+        <h2 class="heading">History</h2>
+        <p>
+            The Duquesne Incline is one of those which follows very closely the tracks of an early coal hoist. Old newspapers indicate the existence of such a conveyance as early as 1854. Residents apparently referred to it as "Kirk Lewis' incline" and located it on the present site of The Duquesne Incline's Upper Station. Grandview Avenue was then the High Street, and the area was just beginning to be converted from farmland to homesites. This pleasantly-situated acreage was an excellent area to absorb some of the expanding population of the city, but the problem of easy access was still to be solved.
+        </p>
+
+        <p>
+            Although plans for a freight and passenger incline are known to have existed much earlier, financial backing was exceedingly hard to find--even the modest sum of $47,000--and actual construction was delayed. Eventually, of course, difficulties were overcome and the Incline was built. It was opened to the public May 20, 1877. The Duquesne Incline was the first Pittsburgh incline designed and built by Samuel Diescher, for Kirk Bigham and Associates. Mr. Diescher, an engineer, had become the country's foremost builder of inclines. He was also to design and build most of those that followed.
+        </p>
+
+        <p>
+            At the time of its public opening, it was one of four inclined planes serving the summit of Coal Hill, which later came to be known as Mount Washington. The Duquesne Incline was operated, from 1877 until 1962 by The Duquesne Inclined Plane Company. From 1964 until the present, the Incline has been operated by the Society for the Preservation of The Duquesne Heights Incline; it has been owned by the Port Authority of Allegheny County.
+        </p>
+
+        <h2 class="heading">The Society for the Preservation of the Duquesne Heights Incline</h2>
+        <p>
+            The Society for the Preservation of the Duquesne Heights Incline was formed in 1964 by the Duquesne Heights/Mount Washington neighborhood group that had rescued, repaired, and reopened the Incline in 1963. The purpose was to continue to restore and rehabilitate the cars, equipment, and both stations, and to establish the entire operation as a reliable commuter facility and a popular visitor attraction. Memberships in the society are available, call for details.
+        </p>
+
+        <h2 class="heading">Facts</h2>
+        <div id="facts-container"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const factsContainer = document.getElementById("facts-container");
+                const factsContent = `
+                    <p>
+                        <strong>Opened to Public:</strong> May 20, 1877<br>
+                        <strong>Cost to Build:</strong> $47,000<br>
+                        <strong>Length of Track:</strong> 794 feet<br>
+                        <strong>Elevation:</strong> 400 feet<br>
+                        <strong>Grade:</strong> 30.5 degrees<br>
+                        <strong>Speed:</strong> 6 miles per hour<br>
+                        <strong>Passenger Capacity:</strong> 18 per car
+                    </p>
+                `;
+                factsContainer.innerHTML = factsContent;
+            });
+        </script>
+
+        <h2 class="heading">Useful Links</h2>
+        <ul class="useful-links">
+            <li>
+                <a href="https://www.facebook.com/TheDuquesneIncline" target="_blank">
+                    <img src="../static/Screenshot 2025-03-30 171544.jpg" alt="Facebook logo linking to the Duquesne Incline's Facebook page" class="link-image">
+                </a>
+            </li>
+            <li><a href="https://www.yelp.com/biz/duquesne-incline-pittsburgh" target="_blank">Yelp</a></li>
+            <li><a href="https://www.viator.com/Pittsburgh-attractions/Duquesne-Incline/d22639-a21677" target="_blank">Viator</a></li>
+            <li><a href="https://www.visitpittsburgh.com/directory/duquesne-incline/" target="_blank">Visit Pittsburgh</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Duquesne_Incline" target="_blank">Wikipedia</a></li>
+        </ul>
+
+        <h2 class="heading">Join the Mailing List</h2>
+        <button id="openFormButton" class="form-toggle-button">Open Form</button>
+        <form action="" id="contactForm" style="display: none;">
+            <label for="name">Name (required):</label><br>
+            <input type="text" id="name" name="name" required minlength="1" maxlength="100"><br><br>
+
+            <label for="email">Email Address (required):</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="sms">Receive messages via SMS text:</label>
+            <input type="checkbox" id="sms" name="sms"><br><br>
+
+            <label for="phone">Mobile Phone (optional):</label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10"><br><br>
+
+            <label for="zip">Zip Code (optional):</label><br>
+            <input type="text" id="zip" name="zip" pattern="[0-9]{5}" maxlength="5"><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        Copyright 3/18/2025 
+    </footer>
+
+</body>
+</html>
